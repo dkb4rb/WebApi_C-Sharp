@@ -1,0 +1,11 @@
+.container-Img {
+    margin: auto;
+    max-width: 40%
+}
+
+.input-group-text {
+    max-width: 20%;
+    text-align:center;
+    place-content: center;
+    margin:auto;
+}

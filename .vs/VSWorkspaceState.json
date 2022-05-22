@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Back-End",
+    "\\Back-End\\WebApi",
+    "\\Back-End\\WebApi\\App_Start",
+    "\\Back-End\\WebApi\\bin\\Debug\\net5.0",
+    "\\Back-End\\WebApi\\bin\\Debug\\net5.0\\ref",
+    "\\Back-End\\WebApi\\bin\\Release"
+  ],
+  "SelectedNode": "\\Back-End\\WebApi\\App_Start\\WebApiConfig.cs",
+  "PreviewInSolutionExplorer": false
+}

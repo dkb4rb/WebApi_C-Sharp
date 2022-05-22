@@ -1,0 +1,14 @@
+.Header {
+    background: black;
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: right;
+}
+
+div a{
+    color: white;
+    margin: 10px;
+    font-style: none;    
+}
