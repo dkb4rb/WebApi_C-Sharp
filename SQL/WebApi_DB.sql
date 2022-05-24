@@ -3,11 +3,11 @@ CREATE DATABASE WebApi;
 USE  WebApi;
 
 CREATE TABLE Ownerr (
-	IdOwner INT PRIMARY KEY,
-	Name varchar(30),
-	Address varchar(50),
-	Photo varchar(100),
-	Birthday date
+	IdOwner INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	Name varchar(30)NOT NULL,
+	Address varchar(50)NOT NULL,
+	Photo varchar(100)NOT NULL,
+	Birthday date NOT NULL
 );
 
 select * from Ownerr;
@@ -15,23 +15,24 @@ select * from Ownerr;
 
 
 CREATE TABLE Property (
-	IdProperty INT PRIMARY KEY,
+	IdProperty INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	Name varchar(50),
 	Address varchar(50),
-	Price DECIMAL(1),
-	CodeInterval varchar(10),
+	Price money,
+	CodeInterval bit,
 	Yearr DATETIME,
-	IdOwner INT FOREIGN KEY REFERENCES Ownerr(IdOwner));
+	IdOwner INT FOREIGN KEY REFERENCES Ownerr(IdOwner)
+	);
 
 CREATE TABLE PropertyImage (
-	IdPropertyImage INT PRIMARY KEY,
-	FilesUrl varchar(1000),
+	IdPropertyImage INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	FilesUrl varchar(MAX),
 	IdProperty INT FOREIGN KEY REFERENCES Property(IdProperty)
 );
 
 
-CREATE TABLE PropeertyTrace(
-	IdPropertySale INT  PRIMARY KEY,
+CREATE TABLE PropertyTrace(
+	IdPropertySale INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	DateSale DATETIME,
 	Name varchar(30),
 	Value varchar(30),
