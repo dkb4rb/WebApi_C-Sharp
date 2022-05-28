@@ -1,28 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace API.Models
 {
-    public class Property
+    public partial class Property
+    {
+        public Property()
+        {
+
+        }
+
+        [Key]
+        public int idProperty { get; set; }
+
+        public string Name { get; set; }
+
+        public string Address { get; set; }
+
+        public Decimal Price { get; set; }
+
+        public Boolean CodeInterval { get; set; }
+
+        public DateTime Yearr { get; set; }
+
+        public int? idOwner { get; set; }
+        public virtual Ownerr Owner { get; set; }
+    }
+    public partial class PropertyItem
     {
         [Key]
         public int idProperty { get; set; }
-        [Required]
-        public string Name { get; set; }
-        [Required]
-        public string Address { get; set; }
-        [Required]
-        public Decimal Price { get; set; }
-        [Required]
-        public Boolean CodeInterval { get; set; }
-        [Required]
-        public DateTime Yearr { get; set; }
-        [ForeignKey("idOwner")]
-        public int idOwner { get; set; }
-    }
 
+        public string Name { get; set; }
+
+        public string Address { get; set; }
+
+        public Decimal Price { get; set; }
+
+        public Boolean CodeInterval { get; set; }
+
+        public DateTime Yearr { get; set; }
+      
+        public int? idOwner { get; set; }
+    }
 }
